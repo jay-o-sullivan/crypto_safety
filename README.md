@@ -51,11 +51,22 @@ A lightweight and fast Python cryptography toolkit that prioritizes speed while 
 
 ## 📦 Installation
 
+### From PyPI (once published)
+
+```bash
+pip install crypto-safety
+```
+
+### From Source
+
 ```bash
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ## 💻 Usage Examples
+
+### As a Python Library
 
 ### Symmetric Encryption (Fast AES-128-CTR)
 
@@ -158,8 +169,70 @@ This library prioritizes performance over maximum security. For applications req
 
 ## 🧪 Running the Benchmarks
 
+### Python API
 ```bash
 python main.py
+```
+
+### Command-line
+```bash
+crypto-safety benchmark
+```
+
+## 🖥️ Command-line Interface
+
+Crypto Safety comes with a full-featured command-line interface:
+
+### Symmetric Encryption
+
+```bash
+# Generate a new key
+crypto-safety symmetric keygen --mode CTR --output my.key
+
+# Encrypt a file
+crypto-safety symmetric encrypt --key my.key --input plaintext.txt --output encrypted.txt
+
+# Decrypt a file
+crypto-safety symmetric decrypt --key my.key --input encrypted.txt --output decrypted.txt
+```
+
+### Asymmetric Encryption
+
+```bash
+# Generate keypair
+crypto-safety asymmetric keygen --private-key private.pem --public-key public.pem
+
+# Encrypt with public key
+crypto-safety asymmetric encrypt --key public.pem --input plaintext.txt --output encrypted.txt
+
+# Decrypt with private key
+crypto-safety asymmetric decrypt --key private.pem --input encrypted.txt --output decrypted.txt
+
+# Sign a file
+crypto-safety asymmetric sign --key private.pem --input document.txt --output signature.txt
+
+# Verify a signature
+crypto-safety asymmetric verify --key public.pem --input document.txt --signature signature.txt
+```
+
+### Hashing
+
+```bash
+# Calculate hash
+crypto-safety hash calculate --algorithm sha256 --input file.txt
+
+# Hash a password
+crypto-safety hash password --algorithm pbkdf2 --output hashed_password.txt
+
+# Verify a password
+crypto-safety hash verify --hash hashed_password.txt
+```
+
+### Benchmarks
+
+```bash
+# Run benchmarks
+crypto-safety benchmark --iterations 100
 ```
 
 ## 📋 Requirements
