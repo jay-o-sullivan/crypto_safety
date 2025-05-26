@@ -27,27 +27,27 @@ def main():
         print("A lightweight and fast Python cryptography toolkit")
         print("https://github.com/jay-o-sullivan/crypto_safety")
         return 0
-
+    
     if args.benchmark:
         # Run the benchmark script
         print("Running benchmarks...")
         try:
             # Get the directory of this script
             script_dir = os.path.dirname(os.path.abspath(__file__))
-            benchmark_script = os.path.join(script_dir, "examples.py")
+            benchmark_script = os.path.join(script_dir, "standalone_demo.py")
             subprocess.run([sys.executable, benchmark_script])
             return 0
         except Exception as e:
             print(f"Error running benchmarks: {e}")
             return 1
-
+            
     if args.demo:
         # Run the demo script
         print("Running demonstration...")
         try:
             # Get the directory of this script
             script_dir = os.path.dirname(os.path.abspath(__file__))
-            demo_script = os.path.join(script_dir, "examples.py")
+            demo_script = os.path.join(script_dir, "standalone_demo.py")
             subprocess.run([sys.executable, demo_script])
             return 0
         except Exception as e:

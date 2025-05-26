@@ -51,6 +51,39 @@ To benchmark the performance of the toolkit:
 python examples.py
 ```
 
+## Standalone Usage
+
+If you encounter issues with the dependencies, you can use the standalone scripts:
+
+```bash
+# Run the standalone demo
+python standalone_demo.py
+
+# Run the standalone examples with all features
+python standalone_examples.py --all
+
+# Run specific standalone examples
+python standalone_examples.py --symmetric  # Symmetric encryption
+python standalone_examples.py --hash       # Hashing functions
+python standalone_examples.py --rsa        # RSA encryption
+python standalone_examples.py --benchmark  # Performance benchmarks
+```
+
+## Simple CLI Tool
+
+The toolkit also includes a simple command-line interface:
+
+```bash
+# Show version information
+python crypto_safety_simple_cli.py --version
+
+# Run a demonstration
+python crypto_safety_simple_cli.py --demo
+
+# Run benchmarks
+python crypto_safety_simple_cli.py --benchmark
+```
+
 ## Building a Distribution Package
 
 To build a distribution package for sharing or uploading to PyPI:
