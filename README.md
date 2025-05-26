@@ -60,9 +60,32 @@ pip install crypto-safety
 ### From Source
 
 ```bash
-pip install -r requirements.txt
-pip install -e .
+# Clone the repository
+git clone https://github.com/jay-o-sullivan/crypto_safety.git
+cd crypto_safety
+
+# Run the setup script
+python setup_toolkit.py
 ```
+
+## 🔧 Using as a Tool
+
+### Command-Line Interface
+
+```bash
+# Show version information
+python crypto_safety_simple_cli.py --version
+
+# Run a demonstration
+python crypto_safety_simple_cli.py --demo
+
+# Run benchmarks
+python crypto_safety_simple_cli.py --benchmark
+```
+
+### Quick Start Guide
+
+For more detailed usage instructions, see the [Quick Start Guide](QUICK_START.md).
 
 ## 💻 Usage Examples
 
@@ -245,3 +268,15 @@ crypto-safety benchmark --iterations 100
 ## 📄 License
 
 MIT License
+
+## 📊 Summary
+
+Crypto Safety is a comprehensive cryptography toolkit optimized for performance. It provides:
+
+1. **Fast and Practical Cryptography**: Optimized implementations of common cryptographic operations
+2. **Python Library**: Easy-to-use Python API for all cryptographic functions
+3. **Command-Line Tool**: Access key features from the command line
+4. **Benchmarking Tools**: Measure and compare cryptographic performance
+5. **Clear Documentation**: Detailed README, Quick Start Guide, and examples
+
+The package structure makes it easy to use as both a library in your own projects and as a standalone tool for cryptographic operations. The focus on performance makes it ideal for applications where speed is critical while maintaining reasonable security.
